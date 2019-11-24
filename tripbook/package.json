@@ -15,6 +15,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.18.1",
     "quasar": "^1.0.0",
+    "vue-carousel-3d": "^0.2.0",
     "vue-i18n": "^8.0.0",
     "vue2-dropzone": "^3.6.0"
   },
