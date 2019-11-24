@@ -9,7 +9,11 @@
           <q-avatar>
             <img src="../assets/sad.svg" />
           </q-avatar>
-          TripBook
+          <q-btn
+            to="/"
+            label="TripBook"
+            flat
+          />
         </q-toolbar-title>
         <!-- <q-btn flat round dense icon="group_add" class="q-mr-xs" /> -->
         <q-btn

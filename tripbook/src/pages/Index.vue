@@ -16,7 +16,19 @@
       v-for="i in 5"
       :key="i"
     >
-      <img src="https://cdn.quasar.dev/img/parallax2.jpg">
+      <q-item>
+        <q-item-section avatar>
+          <q-avatar>
+            <img src="~assets/tunisia.png">
+          </q-avatar>
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label>{{["Tabarka","Kef","Sousse","Hammamet"][(Math.ceil(Math.random(i)*5))%4]}}</q-item-label>
+          <q-item-label caption>Lorem ipsum dolor sit amet.</q-item-label>
+        </q-item-section>
+      </q-item>
+      <img :src="`http://lorempixel.com/400/200/nature/${i+1}/`">
 
       <q-list>
         <q-item clickable>
