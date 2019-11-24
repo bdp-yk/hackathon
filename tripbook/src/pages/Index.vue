@@ -11,13 +11,20 @@
         </template>
       </q-input>
     </q-card>
-    <q-card class="my-card" v-for="i in 5" :key="i">
+    <q-card
+      class="my-card"
+      v-for="i in 5"
+      :key="i"
+    >
       <img src="https://cdn.quasar.dev/img/parallax2.jpg">
 
       <q-list>
         <q-item clickable>
           <q-item-section avatar>
-            <q-icon color="primary" name="local_bar" />
+            <q-icon
+              color="primary"
+              name="local_bar"
+            />
           </q-item-section>
 
           <q-item-section>
@@ -28,7 +35,10 @@
 
         <q-item clickable>
           <q-item-section avatar>
-            <q-icon color="red" name="local_gas_station" />
+            <q-icon
+              color="red"
+              name="local_gas_station"
+            />
           </q-item-section>
 
           <q-item-section>
@@ -39,7 +49,10 @@
 
         <q-item clickable>
           <q-item-section avatar>
-            <q-icon color="amber" name="local_movies" />
+            <q-icon
+              color="amber"
+              name="local_movies"
+            />
           </q-item-section>
 
           <q-item-section>
@@ -57,14 +70,25 @@ export default {
   name: 'PageIndex',
   data () {
     return {
-      focusFilter: false
+      focusFilter: false,
+      all_destination: []
+    }
+  },
+  componentDidMount () {
+    this.retrieve_suggestion()
+  },
+  methods: {
+    retrieve_suggestion () {
+      this.$axios.get('http://localhost:5000/get_my_suggestions').then(r => {
+        this.all_destination = r.data
+      }).catch(er => alert(er.toString()))
     }
   }
 }
 </script>
 
 <style>
-  .my-card{
-    max-width: 50vh;
-  }
+.my-card {
+  max-width: 50vh;
+}
 </style>

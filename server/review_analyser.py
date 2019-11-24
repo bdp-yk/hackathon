@@ -6,6 +6,7 @@ Created on Sat Nov 23 19:15:03 2019
 """
 
 import json
+from flask import jsonify
 
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
