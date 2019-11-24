@@ -1,0 +1,73 @@
+{
+    "Paris": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/paris.jpg",
+        "desc": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.",
+        "comments": [
+            "the place was good in all and it was not the same but good is good",
+            "too bad !!",
+            "good stuff and i loved the place",
+            " the shit is shit  ",
+            "good !! ",
+            "good !! "
+        ],
+        "TS": "18/10/2010"
+    },
+    "Barcelone": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/barcelone.jpg",
+        "desc": "Barcelona, the cosmopolitan capital of Spain’s Catalonia region, is known for its art and architecture. The fantastical Sagrada Família church and other modernist landmarks designed by Antoni Gaudí dot the city. Museu Picasso and Fundació Joan Miró feature modern art by their namesakes. City history museum MUHBA, includes several Roman archaeological sites.",
+        "comments": [
+            "too bad !!",
+            "good stuff and i loved the place",
+            " the shit is shit  ",
+            "its okay and all",
+            "good !! ",
+            "good !! "
+        ],
+        "TS": "20/12/2012"
+    },
+    "Tunis": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/tunis.jpg",
+        "desc": "Tunis is the sprawling capital of Tunisia, a country in North Africa. It sits along Lake Tunis, just inland from the Mediterranean Seas Gulf of Tunis. It’s home to a centuries-old medina and the Bardo, an archaeology museum where celebrated Roman mosaics are displayed in a 15th-century palace complex. The parklike ruins of ancient Carthage sit in the city’s northern suburbs.",
+        "comments": [
+            " the shit is shit  ",
+            "its okay and all",
+            "my family did not apreciate the place and the food was okay but we liked it",
+            "very underrated country, a must go"
+        ],
+        "TS": "20/05/2013"
+    },
+    "Rio de Janeiro": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/brasilia.jpg",
+        "desc": "Rio de Janeiro is a huge seaside city in Brazil, famed for its Copacabana and Ipanema beaches, 38m Christ the Redeemer statue atop Mount Corcovado and for Sugarloaf Mountain, a granite peak with cable cars to its summit. The city is also known for its sprawling favelas (shanty towns). Its raucous Carnaval festival, featuring parade floats, flamboyant costumes and samba dancers, is considered the world’s largest.",
+        "comments": [
+            "my family did not apreciate the place and the food was okay but we liked it",
+            "very underrated country, a must go",
+            "the weather is super good ",
+            "good !"
+        ],
+        "TS": "15/05/2018"
+    },
+    "Rabat": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/rabat.jpg",
+        "desc": "Rabat, Morocco's capital, rests along the shores of the Bouregreg River and the Atlantic Ocean. It's known for landmarks that speak to its Islamic and French-colonial heritage, including the Kasbah of the Udayas. This Berber-era royal fort is surrounded by formal French-designed gardens and overlooks the ocean. The city's iconic Hassan Tower, a 12th-century minaret, soars above the ruins of a mosque.",
+        "comments": [
+            "very underrated country, a must go",
+            "the weather is super good ",
+            "too much humidity and heat but the natives are friendly",
+            " none productive place if you are going to work"
+        ],
+        "TS": "01/07/2019"
+    },
+    "Cairo": {
+        "url": "C:/Users/fedi/Desktop/Nouveau dossier/cairo.jpg",
+        "desc": "Cairo, Egypts sprawling capital, is set on the Nile River. At its heart is Tahrir Square and the vast Egyptian Museum, a trove of antiquities including royal mummies and gilded King Tutankhamun artifacts. Nearby, Giza is the site of the iconic pyramids and Great Sphinx, dating to the 26th century BC. In Gezira Island’s leafy Zamalek district, 187m Cairo Tower affords panoramic city views",
+        "comments": [
+            "too much humidity and heat but the natives are friendly",
+            " none productive place if you are going to work",
+            " unbelievable !! very tasty food and cool places",
+            " the family liked it  ",
+            "  i do not recommend it "
+        ],
+        "TS": "01/07/2019"
+    }
+}

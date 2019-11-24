@@ -1,0 +1,9 @@
+pandas
+vaderSentiment
+opencv-python
+matplotlib
+numpy
+scipy
+Pillow
+
+flask
