@@ -4,28 +4,24 @@ Created on Sat Nov 23 23:15:47 2019
 
 @author: go home
 """
-import os
+import json
+from flask import jsonify
 import random
-
-import _pickle as cPickle
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 import scipy
-# from scipy.misc import imread
-imread = cv2.imread
+from scipy.misc import imread
+import _pickle as cPickle
+import os
+import matplotlib.pyplot as plt
+from flask import jsonify
 
 def extract_features(image_path, vector_size=32):
-    image = imread(image_path)
+    image = imread(image_path, mode="RGB")
     try:
-        # Using KAZE, cause SIFT, ORB and other was moved to additional module
-        # which is adding addtional pain during install
         alg = cv2.KAZE_create()
         # Dinding image keypoints
         kps = alg.detect(image)
-        # Getting first 32 of them. 
-        # Number of keypoints is varies depend on image size and color pallet
-        # Sorting them based on keypoint response value(bigger is better)
         kps = sorted(kps, key=lambda x: -x.response)[:vector_size]
         # computing descriptors vector
         kps, dsc = alg.compute(image, kps)
@@ -44,8 +40,9 @@ def extract_features(image_path, vector_size=32):
 
     return dsc
 
+#extract_features(r'c:\\Users\\go home\\Pictures\\MonCV\\overview\\images\\img2.jpg', vector_size=32)
 
-images_path=r'C:\\Users\\Dell\\Desktop\\Hackathon\\server\\img data'
+images_path=r'C:\\Users\\fedi\\Desktop\\Nouveau dossier'
 
 
 
@@ -97,31 +94,42 @@ class Matcher(object):
 
 
 def show_img(path):
-    img = imread(path)
+    img = imread(path, mode="RGB")
     plt.imshow(img)
     plt.show()
     
+x=[]
+dic_f=[]
+dic={}
+pos = 0
 def run(sample):
-    files = [os.path.join(images_path, p) for p in sorted(os.listdir(images_path))]
+    images_path = r'C:\\Users\\fedi\\Desktop\\img places'
+   # files = [os.path.join(images_path, p) for p in sorted(os.listdir(images_path))]
     # getting 3 random images 
-    # sample = files[5]
-    
+#    sample = files[1]
     batch_extractor(images_path)
 
     ma = Matcher('features.pck')
-    
+    with open('C:\\Users\\fedi\\Desktop\\Hackathon\\server\\data.json',encoding="utf8") as f:
+        data = json.load(f)
+
     print('Query image ==========================================')
-    show_img(sample)
+    #show_img(sample)
     names, match = ma.match(sample, topn=3)
     print('Result images ========================================')
     for i in range(3):
             # we got cosine distance, less cosine distance between vectors
             # more they similar, thus we subtruct it from 1 to get match value
         print('Match %s' % (1-match[i]))
-        show_img(os.path.join(images_path, names[i]))
+        x.append(os.path.join(images_path, names[i]))
+        print(x[i][names[i].rfind('\\')+1:])
+        dic.update({i:x[i][names[i].rfind('\\')+1:names[i].rfind('.')]})
+        dic_f.append({x[i][names[i].rfind('\\')+1:names[i].rfind('.')]:data[dic[i]]})
 
-
-
-
+    """ return jsonify(dic_f) """
+    
+    
+    
 if __name__ == "__main__":
-    run("C:\\Users\\Dell\\Desktop\\8dd.jpg")
+    run("C:\\Users\\fedi\\Desktop\\img places\\rabat.jpg")
+
